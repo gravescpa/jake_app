@@ -8,7 +8,7 @@ end
 
 post '/number' do
     number = params[:student_number]
-    redirect '/names?student_number=' + number
+    #redirect '/names?student_number=' + number
 end
 
 get '/names' do
