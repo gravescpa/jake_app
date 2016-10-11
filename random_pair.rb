@@ -2,7 +2,6 @@
 
 ### This is the work everyone just stole form me ###
 def randomizer(user_names)
-    #names_array = names.split(",")
     shuffled = user_names.shuffle
     sliced = shuffled.each_slice(2).to_a
     if shuffled.length % 2 == 1

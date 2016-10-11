@@ -1,14 +1,16 @@
-
+<center>
 Great! You have <%=number%> students today!
 
-Enter your the names of each student below. Then click submit.<br>
+Enter your the names of each student below. Then click enter.<br>
 <br>
 
 <form method = "post" action = "names">
 	<% number.to_i.times do%>
 	<input type = "text" autofocus="autofocus" name = "user_names[]">
 	<%end%>
-	<input type = "submit">
+	<input type = "submit" value = "Enter">
 </form>
+
+</center>
 
 
