@@ -5,21 +5,31 @@ It will take the names of the students in your class and randomly pair them. Sho
 How many students are in class today?
 <br>
 <br>
+
+<input type = "number" id="myInput" onchange="return myFunction()">
+
 <%#<form method = "post" action = "number">%>
-	<input type = "number" autofocus="autofocus" name = "student_number" id="myInput" onchange="return myFunction()">
-	<%#<input type = "submit" style="visibility:hidden;" />%>
 <%#</form>%>
+<%#onchange="return myFunction()">%>
 <p id="demo"></p>
 <script>
-function myFunction() {
-    var x = document.getElementById("myInput").value;
-	var y = "";
-	for (i = 0; i < x; i++) {
-		z = <input type = "text" autofocus="autofocus" name = "user_names[]">
-		y += z + x;
-	}
-	document.getElementById("demo").innerHTML = "Enter the student names here:" + y;
-}
-</script>
+	function myFunction() {
+		var x = document.getElementById("myInput").value;
+		var y = "";
+		for (i = 0; i < x; i++) {
+			//y += " $" + x;
+		}
+		document.getElementById("demo").innerHTML = "Enter the student names here:";
 
+		for (var i = 1; i <= x; i++){
+			var input = document.createElement("input");
+			input type="text";
+			input.name = "text" + i; //names the element
+			document.getElementById("demo").appendChild(input).value;
+	}
+	}
+	</script>
+<br>
+<input type="submit">
+<%#</form>%>
 </center>

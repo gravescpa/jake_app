@@ -7,18 +7,24 @@ get '/' do
 end
 
 post '/number' do
-    number = params[:student_number]
-    #redirect '/names?student_number=' + number
+    erb :get_names
+    # number = params[:student_number]
+    # redirect '/names?student_number=' + number
 end
 
 get '/names' do
-    number = params[:student_number]
-    erb :get_names, :locals => {:number => number}
+    erb :get_names
+    # number = params[:student_number]
+    # erb :get_names, :locals => {:number => number}
 end
 
 post '/names' do
-    names = params[:user_names]
-    random_names_array = randomizer(names)
-    name_pairs = fix(random_names_array)
-    erb :get_names_again, :locals => {:name_pairs => name_pairs}
+    names = params.values
+    puts params
+    results = randomizer(names)
+    "results are #{results}"
+    # names = params[:user_names]
+    # random_names_array = randomizer(names)
+    # name_pairs = fix(random_names_array)
+    # erb :get_names_again, :locals => {:name_pairs => name_pairs}
 end
